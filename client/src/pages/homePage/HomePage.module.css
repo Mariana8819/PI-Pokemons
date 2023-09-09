@@ -1,0 +1,148 @@
+body{
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: linear-gradient(
+            to left,
+            rgb(206, 51, 3) 0%,
+            rgb(245, 164, 73) 100%
+        );
+        text-align: center;
+      
+}
+
+.hometitlee{
+    margin-top: 75px;
+    margin-bottom: 50px;
+    font-size: 76px;
+    color: #f7bb76;
+    font-family: "bigelow rules";
+    
+}
+
+.homee{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paginationContainerCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 8px 28px;
+  }
+  
+  /* 22222222222222222222222 */
+
+  .home {
+    font-family: 'poppins', sans-serif;
+    background-image: linear-gradient(to right, #041840 0%, #020E26 100%);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.link-home {
+    text-decoration: none;
+    color: #F0F1F2;
+}
+.homenav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.home-orden{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.hometitle{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    color: #F0F1F2;
+    margin: 0;
+}
+.homebtn {
+    background-color: #033159;
+    color: #F0F1F2;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 0 50px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.home-btn-2 {
+    background-color: #033159;
+    color: #F0F1F2;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.home-btn-2:hover{
+    background-color: #F0F1F2;
+    color: #033159;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.home-btn:hover {
+    background-color: #F0F1F2;
+    color: #033159;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+.filters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeselect {
+    margin-left: 40 px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #F0F1F2;
+    background: transparent;
+    cursor: pointer;
+    height: 40px;
+    width: 200px;
+    color: #F0F1F2;
+}
+
+.home-select:focus {
+    outline: none;
+}
+
+.home-select option {
+    background: #F0F1F2;
+    color: #020E26;
+
+}
+
+.cardscontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-decoration: none;
+}

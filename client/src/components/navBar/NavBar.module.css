@@ -1,0 +1,27 @@
+.searchbox{
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 150px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.homenav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+.homebtn {
+    background-color: #033159;
+    color: #F0F1F2;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 0 50px;
+    text-decoration: none;
+    cursor: pointer;
+}
