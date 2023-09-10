@@ -44,22 +44,24 @@ const fetchPokemons = pokemons.slice( begining, end)
    // const totalPages = Math.ceil(pokemons.length / pokemonsPerPage);
 
  return (
-    <div className={style.cardslist}>
+    
+    <div className={style.cardscontainer}>
+   
       {/* <h3>Page {currentPage + 1} </h3>
       <button onClick={prevHandler}>Prev</button>
       <button onClick={nextHandler}>Next</button> */}
 
-       <ul>
         {/* {pokemons?.map((pokemon)=>(             */}
             {fetchPokemons.map((pokemon, index)=>
             <Card pokemon={pokemon} 
             key={index}/>
          )}             
-              
-            {/* ))} */}
-        </ul>
-        <Paginated amountPage={amountPage} />
+          
+            <Paginated amountPage={amountPage} />
+       
     </div>
+    
+    
   );
 };
 

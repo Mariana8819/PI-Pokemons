@@ -1,5 +1,5 @@
 import React from 'react';
-import{Route, Routes} from 'react-router-dom';
+import{Route, Routes, useLocation} from 'react-router-dom';
 import LandingPage from './pages/landingPage/LandingPage';
 import DetailPage from './pages/detailPage/DetailPage';
 import HomePage from './pages/homePage/HomePage';
@@ -8,10 +8,13 @@ import './App.css';
 import NavBar from './components/navBar/NavBar';
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="App">
-      <h1>PI Pokemons</h1>
-      <NavBar />
+      <h1 className='apptitle'>PI Pokemons</h1>
+      {location.pathname !== "/" && <NavBar />}
+      
       <Routes>
         <Route path='/' element={<LandingPage />} />;
         <Route path='/home' element={<HomePage />} />;

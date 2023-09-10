@@ -29,24 +29,41 @@
 .pagelink {
   display: block;
   padding: 5px;
-  border-bottom: 1px solid #dee2e6;
-  color: #F0F1F2;
+  border-bottom: 1px solid #268cf1;
+  color: #022a52;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
-.page-link:hover {
+.pagelink:hover {
   color: #F0F1F2;
   transform: scale(1.2);
   border-bottom: 1px solid #343a40;
   transition: scale 0.3s ease;
 }
 
-.page-link:focus {
-  background-color: #041840;
+.pagelink:focus {
+  background-color: #011a2b;
   border-bottom: 1px solid #F0F1F2;
   color: #F0F1F2;
   transform: scale(1.2);
   transition: scale 0.3s ease;
+}
+
+.labelcc {
+  font-size: 1.1rem;
+  margin-right: 5px;
+  color: #F0F1F2;
+}
+.homeselect {
+  margin-left: 40 px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #F0F1F2;
+  background: transparent;
+  cursor: pointer;
+  height: 40px;
+  width: 200px;
+  color: #F0F1F2;
 }

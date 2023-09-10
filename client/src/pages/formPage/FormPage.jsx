@@ -2,6 +2,7 @@ import React, {  useState } from 'react';
 import { useDispatch } from 'react-redux';
 import validate from './Validate';
 import { addPokemons } from '../../redux/actions';
+import style from './FormPage.module.css';
 //import axios from 'axios';
 
 export default function FormPage() {
@@ -95,96 +96,98 @@ export default function FormPage() {
 // }
 
   return (
-    <div>
-      <form onSubmit={(evento)=>handlerSubmit(evento)}>
-        <div>
-          <label>Name: </label>
+    <div className={style.allcc}>
+        <h1 className={style.h1cc} >Create your Pokemon</h1>
+      <form className={style.formcc} onSubmit={(evento)=>handlerSubmit(evento)}>
+        <div className={style.containercc}>
+          <label className={style.labelcc}>Name: </label>
             <input
+            className={style.inputcc}
             name='name'
             value={input.name}
             onChange={handleChange}
             />
-            <span>{errors.name}</span>
+            <span className={style.labelcc}>{errors.name}</span>
          
         </div>
-        <div>
-          <label>Image: </label>
+        <div className={style.containercc}>
+          <label className={style.labelcc}>Image: </label>
             <input
             name='image'
             value={input.image}
             onChange={handleChange}
             />
-            <span>{errors.image}</span>
+            <span className={style.labelcc}>{errors.image}</span>
          
         </div>
-        <div>
-          <label>Life:</label>
+        <div className={style.containercc}>
+          <label className={style.labelcc}>Life:</label>
             <input
             name='life'
             value={input.life}
             onChange={handleChange}
             />
-            <span>{errors.life}</span>
+            <span className={style.labelcc}>{errors.life}</span>
           
         </div>
-        <div>
-          <label>Attack: </label>
+        <div className={style.containercc}>
+          <label className={style.labelcc}>Attack: </label>
             <input
             name='attack'
             value={input.attack}
             onChange={handleChange}
             />
-            <span>{errors.attack}</span>
+            <span className={style.labelcc}>{errors.attack}</span>
         
         </div>
-        <div>
-          <label>Defense:   </label>
+        <div className={style.containercc}>
+          <label className={style.labelcc}>Defense:   </label>
             <input
             name='defense'
             value={input.defense}
             onChange={handleChange}
             />
-            <span>{errors.defense}</span>
+            <span className={style.labelcc}>{errors.defense}</span>
        
         </div>
-        <div>
-          <label>Speed: </label>
+        <div className={style.containercc}>
+          <label className={style.labelcc}>Speed: </label>
             <input
             name='speed'
             value={input.speed}
             onChange={handleChange}
             />
-            <span>{errors.speed}</span>
+            <span className={style.labelcc}>{errors.speed}</span>
         
         </div>
-        <div>
-          <label>Height: </label>
+        <div className={style.containercc}>
+          <label className={style.labelcc}>Height: </label>
             <input
             name='height'
             value={input.height}
             onChange={handleChange}
             />
-            <span>{errors.height}</span>
+            <span className={style.labelcc}>{errors.height}</span>
        
         </div>
-        <div>
-          <label>Weight: </label>
+        <div className={style.containercc}>
+          <label className={style.labelcc}>Weight: </label>
             <input
             name='weight'
             value={input.weight}
             onChange={handleChange}
             />
-            <span>{errors.weight}</span>
+            <span className={style.labelcc}>{errors.weight}</span>
         
         </div>
-        <div>
-          <label>Types:  </label>
+        <div className={style.containercc}>
+          <label className={style.labelcc}>Types:  </label>
             <input
             name='type'
             value={input.type}
             onChange={handleChange}
             />
-            <span>{errors.type}</span>
+            <span className={style.labelcc}>{errors.type}</span>
             {/* {types.map((type)=>{
               return(
                 <option key={type.id} value={type.name}>
@@ -210,7 +213,7 @@ export default function FormPage() {
 
         {Object.keys(errors).length === 0 ?
         (
-        <button type='submit'>Send</button>
+        <button className={style.buttoncc} type='submit'>Send</button>
         ): null}       
 
       </form>

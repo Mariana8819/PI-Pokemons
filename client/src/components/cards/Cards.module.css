@@ -1,6 +1,10 @@
-.cardslist{
-    width: 85vw;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+.cardscontainer {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-gap: 20px; 
+    padding: 20px; 
+    margin: 0 auto; 
+    max-width: 1200px; 
+    text-decoration: none; 
 }

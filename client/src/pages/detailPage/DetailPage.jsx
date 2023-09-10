@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import { getDetailPokemon } from '../../redux/actions';
+import style from './DetailPage.module.css';
 
 export default function DetailPage() {
   const {id}= useParams();
@@ -14,19 +15,21 @@ useEffect(()=>{
 }, [dispatch, id])
 
   return (
-    <div>
-      <p>Id:{id}</p>
-      <p>Name:{detail.name}</p>      
-      <p>Types:{detail.type && detail.type.join(', ')}</p>
-      <p>Life:{detail.life}</p>
-      <p>Attack:{detail.attack}</p>
-      <p>Defense:{detail.defense}</p>
-      <p>Speed:{detail.speed}</p>
-      <p>Height:{detail.height}</p>
-      <p>Weight:{detail.weight}</p>
-      <img src={detail.image} alt={detail.name}/>
-      <p></p>
-
-    </div>
+    <div className={style.detail}>
+      {/* <p>Id:{id}</p> */}
+      <div className={style.detailright}>
+      <p className={style.namedetail}>Name:{detail.name}</p>      
+      </div>
+      <img className={style.detailimg} src={detail.image} alt={detail.name}/>
+      <div className={style.detailleft}>
+      <p className={style.typedetailT}>Types:{detail.type && detail.type.join(', ')}</p>
+      </div>     
+      <p className={style.hwaddetail}>Life:{detail.life}</p>
+      <p className={style.hwaddetail}>Attack:{detail.attack}</p>
+      <p className={style.hwaddetail}>Defense:{detail.defense}</p>
+      <p className={style.hwaddetail}>Speed:{detail.speed}</p>
+      <p className={style.hwaddetail}>Height:{detail.height}</p>
+      <p className={style.hwaddetail}>Weight:{detail.weight}</p>      
+      </div>
   )
 }

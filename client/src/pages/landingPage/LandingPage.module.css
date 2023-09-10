@@ -1,0 +1,46 @@
+/* Estilos para el contenedor principal */
+.lpdiv {
+    /* background: url(../Image/landingPokemon.jpg) no-repeat center center fixed; */
+   /* background-image: image("landingPokemon.jpg") ; */
+  background-image: url("https://gifdb.com/images/high/pokemon-pikachu-running-fdcgna00aeogxcjz.webp");
+   /* background-color: rgb(4, 100, 100);  */
+   text-align: center;
+   background-position: center;
+   background-repeat: no-repeat;
+   padding: 0;
+   background-size: 20%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    align-items: center;
+}
+
+/* Estilos para el título */
+.lptitle {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #84849c;
+    backdrop-filter: blur(20px);
+
+}
+
+/* Estilos para el botón */
+.lpbutton {
+    background: transparent;
+    backdrop-filter: blur(15px);
+    border: 1px solid #96abd4;
+    color: #a1b3d8;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón cuando se le pasa el cursor por encima */
+.lp-button:hover {
+    background-color: #033159;
+    color: #F0F1F2;
+}

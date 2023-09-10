@@ -5,6 +5,7 @@ import {deleteFilter, filterByAttack, filterByOrderAlphabetic, filterByOrderAscD
 import Cards from '../../components/cards/Cards';
 import SearchBar from '../../components/searchBar/SearchBar';
 import style from './HomePage.module.css';
+
 //import Paginated from '../../components/paginated/Paginated';
 
 export default function HomePage() {
@@ -16,7 +17,7 @@ export default function HomePage() {
    // const numPage = useSelector((state)=> state.numPage);
 
     const [inputTypes, setInputTypes] = useState('');
-    console.log("filtro typee", inputTypes)
+   // console.log("filtro typee", inputTypes)
     
    // const[pokemonsPerPage]= useState(12);
 
@@ -109,8 +110,7 @@ export default function HomePage() {
         {/* <Paginated 
         pokemonsPerPage={pokemonsPerPage}
         pokemons={pokemons.lenght}/>     */}
-        <SearchBar /> 
-
+        <SearchBar />        
         <div className={style.cardscontainer}>
         <Cards
          pokemons={pokemons}/>       

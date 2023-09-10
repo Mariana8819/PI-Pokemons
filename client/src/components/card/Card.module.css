@@ -1,8 +1,8 @@
 .cardcontainer{
     display: flex;
     flex-direction: column;
-    background-color: rgb(243, 243, 152);
-    border: 1px solid grey;
+    background-color: rgb(167, 172, 226);
+    border: 1px solid rgb(80, 80, 80);
     border-radius: 5px;
     padding: 25px;
     cursor: pointer;
@@ -14,3 +14,4 @@
 .card-container:hover{
     transform: scale(1.05);
 }
+

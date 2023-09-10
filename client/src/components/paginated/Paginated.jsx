@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nextPage, prevPage } from '../../redux/actions';
+import style from './Paginated.module.css';
 
 
 export default function Paginated({amountPage}) {
@@ -16,25 +17,27 @@ export default function Paginated({amountPage}) {
   }
 
   return (
-    <div>
+    <nav className={style.navpaginado}>
+      <ul className={style.paginado}>
       {
         numPage > 1 ? (
           <>
-          <button onClick={handlePrevPage}>Prev</button>
+          <button className={style.pagelink} href="#!" onClick={handlePrevPage}>Prev</button>
           <span>{numPage - 1}</span>
           </>
         ) : null
       }
-      <span>{numPage}</span>
+      <span className={style.labelcc}>{numPage}</span>
       {
         numPage < amountPage ? (
           <>
           <span>{numPage + 1}</span>
-          <button onClick={handleNextPage}>Next</button>
+          <button className={style.pagelink} href="#!" onClick={handleNextPage}>Next</button>
           </>
         ): null
       }
-    </div>
+      </ul>
+    </nav>
   )
 }
 

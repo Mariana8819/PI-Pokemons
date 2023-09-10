@@ -13,6 +13,9 @@ export default function NavBar() {
         <Link to='/create' className={style.homebtn}>
           <button className={style.homebtn}>Create Pókemon</button>
         </Link>
+        <Link to='/' className={style.homebtn} >
+          <button className={style.homebtn}>Inicio</button>
+        </Link>
       </nav>
     </div>
   )
