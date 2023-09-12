@@ -91,24 +91,49 @@ const rootReducer = (state= initialState, action)=>{
       }  
 
     case FILTER_BY_ORDER_ALPHABETIC:
-
-      const alfabetic = action.payload;
-      let alfaPokemons;
-
-      if (alfabetic === 'A-Z') {
-          alfaPokemons = state.pokemons.sort((a, b) => 
-          a.name.localeCompare(b.name));
-      } else if (alfabetic === 'Z-A') {
-          alfaPokemons = state.pokemons.sort((a, b) => b.name.localeCompare(a.name));
+      const alfabetic = action.payload
+      let sortAlfaPokemon
+      if (alfabetic === 'AZ') {
+          sortAlfaPokemon = state.pokemons.sort((a, b) => {
+              if (a.name === b.name) return 0;
+              return a.name > b.name ? 1 : -1
+          })
+      }
+      else if (alfabetic === 'ZA') {
+          sortAlfaPokemon = state.pokemons.sort((a, b) => {
+              if (a.name === b.name) return 0
+              return a.name < b.name ? 1 : -1
+          })
       } else {
-          alfaPokemons = [...state.pokemons];
+          sortAlfaPokemon = [...state.pokemons] // hacer una copia de la lista original
       }
 
       return {
           ...state,
-          pokemons: alfaPokemons,
-          currentPage: 1
+
+          pokemonsFilter: sortAlfaPokemon
       };
+
+
+
+
+      // const alfabetic = action.payload;
+      // let alfaPokemons;
+
+      // if (alfabetic === 'AZ') {
+      //     alfaPokemons = state.pokemons.sort((a, b) => 
+      //     a.name.localeCompare(b.name));
+      // } else if (alfabetic === 'ZA') {
+      //     alfaPokemons = state.pokemons.sort((a, b) => b.name.localeCompare(a.name));
+      // } else {
+      //     alfaPokemons = [...state.pokemons];
+      // }
+
+      // return {
+      //     ...state,
+      //     pokemons: alfaPokemons,
+      //     currentPage: 1
+      // };
 
       case FILTER_BY_ORDER_ASC_DESC:
         const order = action.payload;

@@ -45,32 +45,3 @@ export default function Paginated({amountPage}) {
 
 
 
-
-
-// import React from 'react';
-// import style from './Paginated.module.css';
-
-// export default function Paginated({pokemonsPerPage, pokemons, paginated}) {
-  
-//   const pageNumber = [];
-
-//   for( let i = 1 ; i <= Math.ceil(pokemons/pokemonsPerPage) ; i++){
-//     pageNumber.push(i);
-//   }
-
- 
-//   return (
-//     <nav className={style.navpaginado}>
-//       <ul>
-//         {pageNumber &&
-//         pageNumber.map((number)=>(
-//           <li key={number}  className={style.pageitem}>
-//             <a onClick={()=> paginated(number)} className={style.pagelink} href='#!' >
-//               {number}
-//             </a>
-//           </li>
-//         ))}
-//       </ul>
-//     </nav>
-//   )
-// }

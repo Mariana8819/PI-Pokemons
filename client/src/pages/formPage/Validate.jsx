@@ -1,30 +1,30 @@
-export default function validate (input){
+export default function validate (inputs){
     const errors= {};
-    if( !input.name.trim().length) {
+    if( !inputs.name.trim().length) {
       errors.name = "Must have a name"
     }
-    else if(!input.image.trim().startsWith('http')){
+    else if(!inputs.image.trim().startsWith('http')){
       errors.image = "Must have an URL"
     }
-    else if(isNaN(input.life)){
+    else if(isNaN(inputs.life)){
       errors.life = "Must have a numeric value"
     }
-    else if(isNaN(input.attack)){
+    else if(isNaN(inputs.attack)){
       errors.attack = "Must have a numeric value"
     }
-    else if(isNaN(input.defense)){
+    else if(isNaN(inputs.defense)){
       errors.defense = "Must have a numeric value"
     }
-    else if(isNaN(input.speed)){
+    else if(isNaN(inputs.speed)){
       errors.speed = "Must have a numeric value"
     }
-    else if(isNaN(input.height)){
+    else if(isNaN(inputs.height)){
       errors.height = "Must have a numeric value"
     }
-    else if(isNaN(input.weight)){
+    else if(isNaN(inputs.weight)){
       errors.weight = " Must have a numeric value"
     }
-    else if(!input.type){
+    else if(!inputs.type){
       errors.type = " Must have a type"
     }
     return errors;

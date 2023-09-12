@@ -81,14 +81,14 @@
     cursor: pointer;
     height: 40px;
     width: 200px;
-    color: #F0F1F2;
+    color: #ddedfc;
 }
 
-.home-select:focus {
+.homeselect:focus {
     outline: none;
 }
 
-.home-select option {
+.homeselect option {
     background: #F0F1F2;
     color: #020E26;
 

@@ -17,7 +17,7 @@ import {
 
 export const getPokemons = ()=>{
     return async function(dispatch){
-        const response = await axios.get("http://localhost:3001/pokemons");
+        const response = await axios.get(`http://localhost:3001/pokemons/`);
       return  dispatch ({
             type: GET_POKEMONS,
             payload: response.data
@@ -51,10 +51,10 @@ export const getQueryPokemon = (name) =>{
     }
 }
 
-export const addPokemons = (input) =>{
+export const addPokemons = (inputs) =>{
     return async function(dispatch){
         try{
-        const response = await axios.post("http://localhost:3001/pokemons", input);
+        const response = await axios.post("http://localhost:3001/pokemons", inputs);
         return dispatch({
             type: ADD_POKEMONS,
             payload: response.data
@@ -89,10 +89,10 @@ export const filterByOrigin = (origin)=>{
     }
 }
 
-export const filterByOrderAlphabetic = (option)=>{
+export const filterByOrderAlphabetic = (alfabetic)=>{
     return{
         type: FILTER_BY_ORDER_ALPHABETIC,
-        payload: option,
+        payload: alfabetic,
     }
 }
 

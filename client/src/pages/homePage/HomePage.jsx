@@ -6,7 +6,6 @@ import Cards from '../../components/cards/Cards';
 import SearchBar from '../../components/searchBar/SearchBar';
 import style from './HomePage.module.css';
 
-//import Paginated from '../../components/paginated/Paginated';
 
 export default function HomePage() {
     const dispatch = useDispatch();
@@ -18,10 +17,7 @@ export default function HomePage() {
 
     const [inputTypes, setInputTypes] = useState('');
    // console.log("filtro typee", inputTypes)
-    
-   // const[pokemonsPerPage]= useState(12);
-
-   
+     
 
 
     useEffect(()=>{
@@ -84,8 +80,8 @@ export default function HomePage() {
 
             <select className={style.homeselect} name='alfabetic' defaultValue={'Default'} onChange={handleFilterByOrderAlphabetic}> 
                 <option disabled value={'Default'}>Order by Alphabetic</option>
-                <option value='A-Z'>A-Z</option>
-                <option value='Z-A'>Z-A</option>
+                <option value='AZ'>A-Z</option>
+                <option value='ZA'>Z-A</option>
             </select>
 
             <select className={style.homeselect} name='order' defaultValue={'Default'} onChange={handleFilterByOrderAscDesc}>
@@ -107,9 +103,6 @@ export default function HomePage() {
             <button className={style.homeselect} name='reset' onClick={handleClearFilters}>Delete Filters</button>
         </div>
 
-        {/* <Paginated 
-        pokemonsPerPage={pokemonsPerPage}
-        pokemons={pokemons.lenght}/>     */}
         <SearchBar />        
         <div className={style.cardscontainer}>
         <Cards

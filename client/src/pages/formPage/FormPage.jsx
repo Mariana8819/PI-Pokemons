@@ -10,7 +10,7 @@ export default function FormPage() {
   const dispatch = useDispatch();
 
 
-  const [input, setInput]= useState({
+  const [inputs, setInputs]= useState({
     name: '',
     image:'',
     life:'',
@@ -38,62 +38,23 @@ export default function FormPage() {
 
   const handleChange=(evento)=>{      //f para manejar los cambios en los inputs del form
     const {name, value} =evento.target;
-    setInput({
-      ...input,
+    setInputs({
+      ...inputs,
       [name]:value,
       type: value.split(',').map((item)=> item.trim())      //es dinamico y se adapta al lugar donde este seteado el name
     })
   setErrors(validate({      //seteo los errores en el estado
-    ...input,
+    ...inputs,
     [name]:value,
   }));
 };
 
   const handlerSubmit=(evento)=>{
     evento.preventDefault();
-    dispatch(addPokemons(input));
+    dispatch(addPokemons(inputs));
     alert("✅Pokemon created successfully!!✅");
     };
 
-  //const  types= useSelector((state)=> state.types);
-
-  // useEffect(()=>{
-  //   dispatch(getTypes());
-  // },[dispatch]);
-
-  // const handleDelete=(type)=>{
-  //   setInput({
-  //     ...input,
-  //     types: input.types.filter((types)=> types !==type),
-  //   })
-  // };
-
-  // const hanldeSelectType=(evento)=>{
-  //   const selected = evento.target.value;
-  //   if(input.type.length >=2)
-  //   return alert("Cannot choose more than two types");
-  // if(!input.type.includes(selected)){
-  //   setInput({
-  //     ...input,
-  //     types: [...input.type, selected],
-  //   })
-  // }
-  // };
-
-// const handlerSubmit= async(evento)=>{
-//   evento.preventDefault();            
-//   axios.post('http://localhost:3001/pokemons/new', JSON.stringify(input),{   
-//    headers:{
-//     'Content-Type':'application/json'
-//    }
-//   })
-//     .then(res=>{
-//       alert('Form completed successfully');
-//     })
-//      .catch(errorCatch => {
-//       alert(errorCatch);
-//      })
-// }
 
   return (
     <div className={style.allcc}>
@@ -104,7 +65,7 @@ export default function FormPage() {
             <input
             className={style.inputcc}
             name='name'
-            value={input.name}
+            value={inputs.name}
             onChange={handleChange}
             />
             <span className={style.labelcc}>{errors.name}</span>
@@ -114,7 +75,7 @@ export default function FormPage() {
           <label className={style.labelcc}>Image: </label>
             <input
             name='image'
-            value={input.image}
+            value={inputs.image}
             onChange={handleChange}
             />
             <span className={style.labelcc}>{errors.image}</span>
@@ -124,7 +85,7 @@ export default function FormPage() {
           <label className={style.labelcc}>Life:</label>
             <input
             name='life'
-            value={input.life}
+            value={inputs.life}
             onChange={handleChange}
             />
             <span className={style.labelcc}>{errors.life}</span>
@@ -134,7 +95,7 @@ export default function FormPage() {
           <label className={style.labelcc}>Attack: </label>
             <input
             name='attack'
-            value={input.attack}
+            value={inputs.attack}
             onChange={handleChange}
             />
             <span className={style.labelcc}>{errors.attack}</span>
@@ -144,7 +105,7 @@ export default function FormPage() {
           <label className={style.labelcc}>Defense:   </label>
             <input
             name='defense'
-            value={input.defense}
+            value={inputs.defense}
             onChange={handleChange}
             />
             <span className={style.labelcc}>{errors.defense}</span>
@@ -154,7 +115,7 @@ export default function FormPage() {
           <label className={style.labelcc}>Speed: </label>
             <input
             name='speed'
-            value={input.speed}
+            value={inputs.speed}
             onChange={handleChange}
             />
             <span className={style.labelcc}>{errors.speed}</span>
@@ -164,7 +125,7 @@ export default function FormPage() {
           <label className={style.labelcc}>Height: </label>
             <input
             name='height'
-            value={input.height}
+            value={inputs.height}
             onChange={handleChange}
             />
             <span className={style.labelcc}>{errors.height}</span>
@@ -174,7 +135,7 @@ export default function FormPage() {
           <label className={style.labelcc}>Weight: </label>
             <input
             name='weight'
-            value={input.weight}
+            value={inputs.weight}
             onChange={handleChange}
             />
             <span className={style.labelcc}>{errors.weight}</span>
@@ -184,31 +145,11 @@ export default function FormPage() {
           <label className={style.labelcc}>Types:  </label>
             <input
             name='type'
-            value={input.type}
+            value={inputs.type}
             onChange={handleChange}
             />
             <span className={style.labelcc}>{errors.type}</span>
-            {/* {types.map((type)=>{
-              return(
-                <option key={type.id} value={type.name}>
-                  {type.name}
-                </option>
-              )
-            })}
-            <span>{errors.type}</span>
-            </input>        
-        </div>
-        <div>
-          {input.type?.map((typee)=>{
-            return(
-              <span key={typee}>
-                <button onClick={()=>handleDelete(typee)}>
-                  x
-                </button>
-                {typee}
-              </span>
-            )
-          })} */}
+       
         </div>
 
         {Object.keys(errors).length === 0 ?
