@@ -10,7 +10,8 @@ import {
     FILTER_BY_ORDER_ALPHABETIC,
     FILTER_BY_ATTACK,
     DELETE_FILTERS,
-    FILTER_BY_ORDER_ASC_DESC,
+    FILTER_BY_LOW_ATTACK,
+    //FILTER_BY_ORDER_ASC_DESC,
     NEXT_PAGE,
     PREV_PAGE,
 } from "./actionsTypes";
@@ -89,20 +90,6 @@ export const filterByOrigin = (origin)=>{
     }
 }
 
-export const filterByOrderAlphabetic = (alfabetic)=>{
-    return{
-        type: FILTER_BY_ORDER_ALPHABETIC,
-        payload: alfabetic,
-    }
-}
-
-export const filterByOrderAscDesc = (order)=>{
-    return{
-        type: FILTER_BY_ORDER_ASC_DESC,
-        payload: order
-    }
-}
-
 export const filterByAttack = () =>{
     return{
         type: FILTER_BY_ATTACK,
@@ -110,11 +97,28 @@ export const filterByAttack = () =>{
     }
 }
 
+export const filterByLowAttack = (lowAttack) =>{
+    return{
+        type: FILTER_BY_LOW_ATTACK,
+        payload:lowAttack,
+        
+    }
+}
+
+export const orderByAlphabetic = (option) => {
+ return {
+    type:  FILTER_BY_ORDER_ALPHABETIC,
+    payload: option,
+ }
+}
+ 
 export const deleteFilter= ()=>{
     return{
         type: DELETE_FILTERS,
     }
 }
+
+
 
 export const nextPage= ()=>{
     return{

@@ -23,7 +23,7 @@ const fetchPokemons = pokemons.slice( begining, end)
    
 
             {fetchPokemons.map((pokemon, index)=>
-            <Card pokemon={pokemon} 
+            <Card className={style.img} pokemon={pokemon} 
             key={index}/>
          )}             
           
