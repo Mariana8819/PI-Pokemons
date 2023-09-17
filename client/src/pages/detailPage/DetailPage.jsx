@@ -9,9 +9,11 @@ export default function DetailPage() {
   const dispatch = useDispatch();
   const detail = useSelector((state)=> state.detail)
   //console.log("mi detaill", detail);
+  //const [input, setInput] = useState('');
 
 useEffect(()=>{
   dispatch(getDetailPokemon(id))
+  
 }, [dispatch, id])
 
   return (

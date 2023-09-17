@@ -11,7 +11,7 @@ import {
     FILTER_BY_ATTACK,
     DELETE_FILTERS,
     FILTER_BY_LOW_ATTACK,
-    //FILTER_BY_ORDER_ASC_DESC,
+    FILTER_DETAIL,
     NEXT_PAGE,
     PREV_PAGE,
 } from "./actionsTypes";
@@ -39,6 +39,16 @@ export const getDetailPokemon = (id)=>{
     }catch(error){
         alert("The pokemon with that ID does not exist");
     }
+ }
+}
+
+export const filterDetail = (input)=>{
+return async function(dispatch){
+    return ({
+        type: FILTER_DETAIL,
+        payload:input
+
+     })
  }
 }
 

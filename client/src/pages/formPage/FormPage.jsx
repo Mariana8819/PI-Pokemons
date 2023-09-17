@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import validate from './Validate';
 import { addPokemons } from '../../redux/actions';
 import style from './FormPage.module.css';
-//import axios from 'axios';
 
 export default function FormPage() {
 
@@ -145,7 +144,7 @@ export default function FormPage() {
           <label className={style.labelcc}>Types:  </label>
             <input
             name='type'
-            value={inputs.type}
+           
             onChange={handleChange}
             />
             <span className={style.labelcc}>{errors.type}</span>

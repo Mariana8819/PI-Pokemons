@@ -56,7 +56,7 @@ const pokemonsDb = async ()=>{
             speed: p.speed,
             height: p.height,
             weight: p.weight,
-            type: p.Types.map(typ=> typ.name) // asi se muestra en db = ["",""] y no como [{},{},{}]
+            type: p.Types.map(typ=> typ.name)    // se muestra en db = ["",""] y no como [{},{},{}]
         }
     })
     return pokeMap;

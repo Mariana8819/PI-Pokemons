@@ -1,17 +1,3 @@
-// const axios = require("axios");
-// const {Type} = require("../db");
-
-// const createTypesDb = async()=>{
-//     const types = (await axios.get('https://pokeapi.co/api/v2/type')).data.results;
-//     const typeName = types.map((type)=>({name: type.name}));
-
-//     return await Type.bulkCreate(typeName)
-// }
-
-// module.exports= {createTypesDb};
-
-//******************* */
-
 const axios = require("axios");
 const {Type} = require("../db");
 

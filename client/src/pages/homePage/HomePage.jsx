@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import{useDispatch, useSelector} from 'react-redux';
-//aca estuve tocando
 import {deleteFilter, filterByAttack,filterByLowAttack,  filterByOrigin, filterTypes, getPokemons, getTypes, orderByAlphabetic} from '../../redux/actions'
 import Cards from '../../components/cards/Cards';
 import SearchBar from '../../components/searchBar/SearchBar';
@@ -10,14 +9,13 @@ import style from './HomePage.module.css';
 
 export default function HomePage() {
     const dispatch = useDispatch();
-//acaestuve tocando
+
     const [option, setOption] = useState('');
     const [lowAttack, setlowAttack] = useState('');
    
     const pokemons = useSelector((state)=> state.pokemons);
     //console.log("aquii", pokemons)
     const types = useSelector ((state)=> state.types);  
-   // const numPage = useSelector((state)=> state.numPage);
 
     const [inputTypes, setInputTypes] = useState('');
    // console.log("filtro typee", inputTypes)

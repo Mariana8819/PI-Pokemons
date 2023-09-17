@@ -6,13 +6,12 @@ import{
   GET_TYPES,
   FILTER_TYPES,
   FILTER_BY_ORIGIN,
-  FILTER_BY_ORDER_ALPHABETIC,
-  // FILTER_BY_ORDER_ASC_DESC,
+  FILTER_BY_ORDER_ALPHABETIC,  
   FILTER_BY_ATTACK, 
   FILTER_BY_LOW_ATTACK,  
-  //DELETE_FILTERS,
   PREV_PAGE,
   NEXT_PAGE,
+  FILTER_DETAIL,
 } from "./actionsTypes";
 
 const initialState = {
@@ -50,6 +49,12 @@ const rootReducer = (state= initialState, action)=>{
         ...state,
         detail: action.payload
       }     
+    case FILTER_DETAIL:
+     return {
+      ...state,
+      detail: []
+
+     }
       
     case GET_TYPES:
       return{
